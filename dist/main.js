@@ -1,1 +1,1 @@
-console.log("teste"),document.querySelectorAll("p"),p.map((e=>{console.log("e"+Math.random())}));
+(()=>{"use strict";const o=(o,s)=>{console.log(o+s)};o(1,2),o(3,4)})();
