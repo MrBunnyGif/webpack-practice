@@ -1,1 +1,0 @@
-(()=>{"use strict";const o=(o,s)=>{console.log(o+s)};o(1,2),o(3,4)})();
