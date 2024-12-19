@@ -1,4 +1,5 @@
 const path = require("path")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
   entry: "./src/index.js", //entrada de onde ele vai pegar pra fazer o build
@@ -11,9 +12,15 @@ module.exports = {
       {
         test: /\.css$/, //expressão regular para procurar arquivos css
         use: [
-          'style-loader', "css-loader" //Ordem importa, da esquerda para a direita. Transforma o css em estilo mesmo, identifica os arquivos de css.
+          MiniCssExtractPlugin.loader, "css-loader" //Ordem importa, da esquerda para a direita.
+          // Builda o css para um arquivo em específico, identifica os arquivos de css.
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new MiniCssExtractPlugin({ // configura o nome do arquivo final do build de css
+      filename: "index.css"
+    })
+  ]
 }
