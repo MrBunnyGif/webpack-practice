@@ -7,6 +7,8 @@ module.exports = {
     filename: "bundle.js", // nome do arquivo
     path: path.resolve(__dirname, "./dist") // caminho para onde vai ser feito o build
   },
+  mode: "development", // configura o build para desenvolvimento, ou seja, arquivos não minimizados e não otimizados.
+  // Bom par debug
   module: {
     rules: [
       {
