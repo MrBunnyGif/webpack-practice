@@ -1,5 +1,5 @@
 .main-title {
-  background-color: #999;
+  background-color: yellow;
   color: tomato;
-  outline: lightblue;
+  outline: 3px solid lightblue;
 }

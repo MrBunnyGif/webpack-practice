@@ -10,6 +10,10 @@ module.exports = {
   },
   mode: "development", // configura o build para desenvolvimento, ou seja, arquivos não minimizados e não otimizados.
   // Bom par debug
+  devServer: { // configura o servidor de desenvolvimento
+    static: path.resolve(__dirname, "./dist"), // caminho para onde vai ser feito o build
+    port: 8080
+  },
   module: {
     rules: [
       {
