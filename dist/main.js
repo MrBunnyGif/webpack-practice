@@ -1,0 +1,1 @@
+console.log("teste"),document.querySelectorAll("p"),p.map((e=>{console.log("e"+Math.random())}));
