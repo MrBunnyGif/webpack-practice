@@ -1,5 +1,6 @@
 const path = require("path")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const HtmlPlugin = require("html-webpack-plugin")
 
 module.exports = {
   entry: "./src/index.js", //entrada de onde ele vai pegar pra fazer o build
@@ -23,6 +24,9 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({ // configura o nome do arquivo final do build de css
       filename: "index.css"
+    }),
+    new HtmlPlugin({
+      filename: "index.html",
     })
   ]
 }
